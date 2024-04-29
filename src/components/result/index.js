@@ -170,8 +170,21 @@ const Result = (props) => {
 
   return (
     <>
-      {searchText !== "" || (
+      {searchText !== "" &&
+      result.customers.length !== 0 &&
+      result.people.length !== 0 &&
+      result.users.length !== 0 ? (
         <h1 className="result-heading">Results for "{searchText}"</h1>
+      ) : (
+        <></>
+      )}
+
+      {searchText !== "" ? (
+        <></>
+      ) : (
+        <div className="result-heading-2">
+          <h1>Search Results here</h1>
+        </div>
       )}
 
       {searchText !== "" &&
@@ -187,9 +200,7 @@ const Result = (props) => {
           <h4 className="nothing-text">Nothing Found for "{searchText}"</h4>
         </div>
       ) : (
-        <div className="result-heading-2">
-          <h1>Search Results here</h1>
-        </div>
+        <></>
       )}
 
       {result && customers.length !== 0 && c()}

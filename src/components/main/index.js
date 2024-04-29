@@ -14,6 +14,10 @@ export default class Main extends Component {
   };
 
   handleSearch = (text) => {
+    if (text === "") {
+      this.setState({ searchText: "", searchResult: "", loading: false });
+      return;
+    }
     this.setState({ searchText: text, loading: true }, this.getSearchResult);
     console.log(text);
   };

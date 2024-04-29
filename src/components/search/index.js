@@ -8,11 +8,12 @@ const Search = ({ onSearch }) => {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    onSearch(query);
+    // if (query.trim() === "") return;
+    onSearch(query.trim());
   };
 
   return (
-    <form>
+    <form onSubmit={handleSearch}>
       <input
         type="text"
         value={query}
@@ -20,7 +21,7 @@ const Search = ({ onSearch }) => {
         placeholder="Enter Search Query"
         className="search-container"
       />
-      <button className="s-btn" type="submit" onClick={handleSearch}>
+      <button className="s-btn" type="submit">
         <FaSearch />
       </button>
     </form>

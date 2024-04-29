@@ -65,7 +65,7 @@ hr{
     display: flex;
     justify-content: center;
     margin-top: 50px;
-    font-size: 80px;
+    font-size: 70px;
     opacity: 10%;
 }
 
@@ -95,7 +95,12 @@ hr{
 }
 
 .not-found{
-    width: 30vw;
+    /* width: 28vw; */
+    width: 20vw;
+    height: 300px;
+    object-fit: cover;
+    margin: 0px;
+    padding: 0px;
 }
 
 .nothing-text{
